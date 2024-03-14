@@ -72,6 +72,11 @@ order by avg_rating desc;
 select productline, gender, count(gender) as total from wsd
 	group by gender, productline 
     order by total desc;
+-- 9) What is the most common payment? --
+select payment, count(*) as count from wsd
+group by payment
+order by count desc
+limit 1;
 
 -- -- -- -- -- -- -- -- -- -- -- --
 -- SALES --
